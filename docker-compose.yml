@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: ./modules/api/
+      dockerfile: Dockerfile
+    container_name: products-api
+    ports:
+      - "8000:8000"
+    networks:
+      - products_network
+
+  client:
+    build:
+      context: ./modules/client/
+      dockerfile: Dockerfile
+    container_name: products-client
+    ports:
+      - "8080:8080"
+    networks:
+      - products_network
+
+networks:
+  products_network:

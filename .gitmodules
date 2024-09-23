@@ -1,0 +1,6 @@
+[submodule "modules/api"]
+	path = modules/api
+	url = https://github.com/matthew-mar/products-app-api
+[submodule "modules/client"]
+	path = modules/client
+	url = https://github.com/matthew-mar/products-app-web
